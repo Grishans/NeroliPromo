@@ -84,6 +84,29 @@ section.main {
   text-transform: uppercase;
   border: 1px solid #dab56b;
   cursor: pointer;
+  overflow: hidden;
+}
+@keyframes buttonSkew {
+  from {
+    left: -50px;
+  }
+  to {
+    left: 400px;
+  }
+}
+.mtb__text label#InTheForm::before {
+  position: absolute;
+  animation-name: buttonSkew;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+  content: "";
+  width: 20px;
+  height: 100px;
+  top: -20px;
+  left: -50px;
+  background: #dab56b;
+  transform: skewX(-35deg);
+  filter: blur(30px);
 }
 .mtb__text label#InTheForm::after {
   content: url("../img/main_button.png");
@@ -144,4 +167,29 @@ section.main {
   width: 120px;
   height: 60px;
   background: #1c1917;
+}
+.main_slider .mainSlider ul.slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  display: flex !important;
+}
+.main_slider .mainSlider ul.slick-dots li {
+  list-style: none;
+}
+.main_slider .mainSlider ul.slick-dots li button {
+  color: transparent;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  padding: 0;
+}
+.main_slider .mainSlider ul.slick-dots li.slick-active button {
+  background: #dab56b;
+  appearance: none;
+  width: 12px;
+  height: 12px;
 }
