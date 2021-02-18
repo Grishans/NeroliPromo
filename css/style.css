@@ -1,0 +1,147 @@
+@font-face {
+  font-family: Gb;
+  src: local("Mont"), url("/fonts/GothamPro-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: G;
+  src: local("Mont"), url("/fonts/GothamPro.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1c1917;
+}
+
+section.main {
+  display: flex;
+}
+.main__text {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.main__text__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.main__text__block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+.mtb__sn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 20%;
+}
+.mtb__sn a {
+  margin-bottom: 40px;
+}
+.mtb__text {
+  position: absolute;
+  top: 18%;
+  left: 28%;
+  display: flex;
+  flex-direction: column;
+  width: 72%;
+  font-family: G;
+  color: #fff;
+  z-index: 9;
+  transform: translateX(30%);
+}
+.mtb__text span {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.mtb__text hr {
+  height: 2px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  width: 40%;
+  margin-left: 0;
+  margin: 10px 0 15px 0;
+}
+.mtb__text p {
+  font-size: 18px;
+}
+.mtb__text label#InTheForm {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid #dab56b;
+  cursor: pointer;
+}
+.mtb__text label#InTheForm::after {
+  content: url("../img/main_button.png");
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+.main_slider {
+  position: relative;
+  width: 75%;
+}
+.main_slider .slider .slick-arrow {
+  position: absolute;
+  z-index: 2;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #000;
+}
+.main_slider .mainSlider button.slick-prev {
+  bottom: 1.5%;
+  right: 5.5%;
+  background: url("../img/arr_left_yellow.svg") no-repeat;
+  background-position: center right;
+  background-size: contain;
+}
+.main_slider .mainSlider button.slick-next {
+  bottom: 1.5%;
+  right: 1%;
+  background: url("../img/arr_right_yellow.svg") no-repeat;
+  background-position: center left;
+  background-size: contain;
+}
+
+.main_slider .mainSlider button.slick-next.slick-disabled {
+  background: url("../img/arr_right.svg") no-repeat;
+  background-position: center left;
+  width: 18px;
+  height: 18px;
+}
+.main_slider .mainSlider button.slick-prev.slick-disabled {
+  background: url("../img/arr_left.svg") no-repeat;
+  background-position: center right;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+}
+.main_slider .mainSlider .slick-list .slick-track .slick-slide img {
+  width: 100%;
+}
+.main_slider .ms__button__wrap {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 120px;
+  height: 60px;
+  background: #1c1917;
+}
