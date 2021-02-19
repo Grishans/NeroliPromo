@@ -48,6 +48,96 @@
       </div>
     </section>
 
+    <section class="nextEvent">
+      <div class="nextEvent__time">
+        <div id="timer">
+          <div><span id="days"></span></div>
+          <div><span id="hours"></span></div>
+          <div><span id="minutes"></span></div>
+        </div>
+
+        <div class="nt__title">
+          <p>дней</p>
+          <p>часов</p>
+          <p>минут</p>
+        </div>
+      </div>
+      <hr class="nexEvent__hr" />
+      <div class="nextEvent__content">
+        <div class="nc__imgLeft">
+          <img src="img/vertical.png" alt="" />
+        </div>
+        <div class="nc__text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
+            velit non lacus scelerisque rutrum eu vitae ipsum. Cras a maximus
+            erat, vitae feugiat mi.
+          </p>
+          <span>цифра</span>
+          <span class="nc__number">10+</span>
+        </div>
+        <div class="nc__imgRight">
+          <img src="img/mainPage.png" alt="" />
+        </div>
+      </div>
+
+      <img class="timer__tpoRight" src="img/timer__tpoRight.svg" alt="" />
+      <img class="timer__bottom" src="img/timer__bottom.svg" alt="" />
+    </section>
+
+    <section class="gallery">
+      <div class="gallery__title">
+        <p>галерея</p>
+        <hr />
+      </div>
+      <div class="gallery__toogle">
+        <span>модные показы</span>
+        <span>светские мероприятия</span>
+        <span>закрытые вечеринки</span>
+      </div>
+      <div class="gallery__slider">
+        <div class="slider gallerySlider">
+          <div>
+            <div class="gallery_slide">
+              <img class="gB1" src="img/vertical_2.png" alt="" />
+              <img class="gM1" src="img/mainPage.png" alt="" />
+              <img class="gM2" src="img/mainPage.png" alt="" />
+              <img class="gM3" src="img/mainPage.png" alt="" />
+              <img class="gM4" src="img/mainPage.png" alt="" />
+              <img class="gM5" src="img/mainPage.png" alt="" />
+              <img class="gB2" src="img/vertical_2.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <div class="gallery_slide">
+              <img class="gB1" src="img/vertical_2.png" alt="" />
+              <img class="gM1" src="img/mainPage.png" alt="" />
+              <img class="gM2" src="img/mainPage.png" alt="" />
+              <img class="gM3" src="img/mainPage.png" alt="" />
+              <img class="gM4" src="img/mainPage.png" alt="" />
+              <img class="gM5" src="img/mainPage.png" alt="" />
+              <img class="gB2" src="img/vertical_2.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <div class="gallery_slide">
+              <img class="gB1" src="img/vertical_2.png" alt="" />
+              <img class="gM1" src="img/mainPage.png" alt="" />
+              <img class="gM2" src="img/mainPage.png" alt="" />
+              <img class="gM3" src="img/mainPage.png" alt="" />
+              <img class="gM4" src="img/mainPage.png" alt="" />
+              <img class="gM5" src="img/mainPage.png" alt="" />
+              <img class="gB2" src="img/vertical_2.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="gallarySlider__bottom">
+          <p>21.01.2021</p>
+          <span>“искусство стиля”</span>
+        </div>
+      </div>
+    </section>
+
     <script src="js/script.js"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script
@@ -62,6 +152,79 @@
         arrow: true,
         dots: true,
       });
+    </script>
+    <script>
+      $(".gallerySlider").slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrow: true,
+        dots: true,
+      });
+    </script>
+    <script>
+      function initializeTimer() {
+        var endDate = new Date(2021, 1, 25, 14);
+
+        var currentDate = new Date();
+        var seconds = (endDate - currentDate) / 1000;
+        if (seconds > 0) {
+          var minutes = seconds / 59;
+          var hours = minutes / 59;
+          var days = hours / 24;
+          minutes = (hours - Math.floor(hours)) * 59;
+          days = Math.floor(days);
+          hours = Math.floor(hours) - days * 24;
+
+          seconds = Math.floor((minutes - Math.floor(minutes)) * 59);
+          minutes = Math.floor(minutes);
+
+          setTimePage(days, hours, minutes, seconds);
+
+          function secOut() {
+            if (seconds == 0) {
+              if (minutes == 0) {
+                if (hours == 0) {
+                  if (days == 0) {
+                    showMessage(timerId);
+                  } else {
+                    days--;
+                    hours = 24;
+                    minutes = 59;
+                    seconds = 59;
+                  }
+                } else {
+                  hours--;
+                  minutes = 59;
+                  seconds = 59;
+                }
+              } else {
+                minutes--;
+                seconds = 59;
+              }
+            } else {
+              seconds--;
+            }
+            setTimePage(days, hours, minutes, seconds);
+          }
+          timerId = setInterval(secOut, 1000);
+        } else {
+          alert("Установленая дата уже прошла");
+        }
+      }
+
+      window.onload = function () {
+        initializeTimer();
+      };
+      function setTimePage(d, h, m, s) {
+        var days = document.getElementById("days");
+        var hours = document.getElementById("hours");
+        var minutes = document.getElementById("minutes");
+
+        days.innerHTML = d;
+        hours.innerHTML = h;
+        minutes.innerHTML = m;
+      }
     </script>
   </body>
 </html>
