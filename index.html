@@ -136,7 +136,61 @@
           <span>“искусство стиля”</span>
         </div>
       </div>
+
+      <img src="img/gallery_bottom.svg" alt="" class="gallery__bg__bottom" />
+      <img src="img/gallery_topLeft.svg" alt="" class="gallery__bg__tioRight" />
     </section>
+
+    <section class="partners">
+      <span class="parters__title">партнеры</span>
+      <hr>
+      <div class="parters__slider">
+        <div class="slider partnersSlider">
+          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+          <div class="partners__slide partners__slide__add"><img src="img/gallerySlider__add.svg" alt="" /><p>стать партнером</p></div>
+        </div
+      </div>
+    </section>
+
+    <section class="bePartners">
+      <p>хотите стать нашим партнером?</p>
+      <hr>
+    </section>
+
+    <section class="feedback">
+      <div class="feedback__form">
+        <p class="form__title">стать учасником клуба</p>
+        <form action="">
+          <input type="text" placeholder="Имя">
+          <input type="email" placeholder="Ваша электронная почта">
+          <input type="number" placeholder="Ваш номер телефона">
+          <select>
+            <option value="participants">Участник</option>
+            <option value="partner">Партнер</option>
+          </select>
+          <label for="formInp">отправить</label>
+          <input type="button" id="formInp">
+        </form>
+      </div>
+      <div class="feedback__img">
+        <div class="fi__img">
+          <img src="img/mainPage.png" alt="">
+        </div>
+        <div class="fb__sn">
+          <a href="#"><img src="img/vk.svg" alt=""></a>
+          <a href="#"><img src="img/insta.svg" alt=""></a>
+        </div>
+      </div>
+    </section>
+
 
     <script src="js/script.js"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -160,6 +214,16 @@
         slidesToScroll: 1,
         arrow: true,
         dots: true,
+      });
+    </script>
+    <script>
+      $(".partnersSlider").slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrow: true,
+        dots: false,
+        rows: 2
       });
     </script>
     <script>
@@ -215,6 +279,7 @@
 
       window.onload = function () {
         initializeTimer();
+        window.scrollTo(0,0)
       };
       function setTimePage(d, h, m, s) {
         var days = document.getElementById("days");
