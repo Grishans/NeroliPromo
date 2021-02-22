@@ -1,183 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <title>Promo</title>
-  </head>
-  <body>
-    <section class="main">
-      <div class="main__text">
-        <div class="main__text__logo">
-          <img src="img/logo.svg" alt="" />
-        </div>
-        <div class="main__text__block">
-          <div class="mtb__sn">
-            <a href="#"><img src="img/vk.svg" alt="Вконтакте" /></a>
-            <a href="#"><img src="img/insta.svg" alt="Instagram" /></a>
-          </div>
-          <div class="mtb__text">
-            <span>Встречающий заголовок</span>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
-              velit non lacus scelerisque rutrum eu vitae ipsum. Cras a maximus
-              erat, vitae feugiat mi.
-            </p>
-            <label id="InTheForm">кнопка</label>
-          </div>
-        </div>
-      </div>
-      <div class="main_slider">
-        <div class="slider mainSlider">
-          <div><img src="img/mainSlider.png" alt="" /></div>
-          <div><img src="img/mainSlider.png" alt="" /></div>
-          <div><img src="img/mainSlider.png" alt="" /></div>
-          <div><img src="img/mainSlider.png" alt="" /></div>
-          <div><img src="img/mainSlider.png" alt="" /></div>
-          <div><img src="img/mainSlider.png" alt="" /></div>
-        </div>
-        <div class="ms__button__wrap"></div>
-      </div>
-    </section>
 
-    <section class="nextEvent">
-      <div class="nextEvent__time">
-        <div id="timer">
-          <div><span id="days"></span></div>
-          <div><span id="hours"></span></div>
-          <div><span id="minutes"></span></div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <title>Promo</title>
+</head>
 
-        <div class="nt__title">
-          <p>дней</p>
-          <p>часов</p>
-          <p>минут</p>
-        </div>
+<body>
+  <section class="main">
+    <div class="main__text">
+      <div class="main__text__logo">
+        <img src="img/logo.svg" alt="" class="logo"/>
+        <img src="img/menu_mobil.svg" alt="" class="mobil__menu">
       </div>
-      <hr class="nexEvent__hr" />
-      <div class="nextEvent__content">
-        <div class="nc__imgLeft">
-          <img src="img/vertical.png" alt="" />
+      <div class="main__text__block">
+        <div class="mtb__sn">
+          <a href="#"><img src="img/vk.svg" alt="Вконтакте" /></a>
+          <a href="#"><img src="img/insta.svg" alt="Instagram" /></a>
         </div>
-        <div class="nc__text">
+        <div class="mtb__text">
+          <span>Встречающий заголовок</span>
+          <hr />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
             velit non lacus scelerisque rutrum eu vitae ipsum. Cras a maximus
             erat, vitae feugiat mi.
           </p>
-          <span>цифра</span>
-          <span class="nc__number">10+</span>
-        </div>
-        <div class="nc__imgRight">
-          <img src="img/mainPage.png" alt="" />
+          <label id="InTheForm">кнопка</label>
         </div>
       </div>
-
-      <img class="timer__tpoRight" src="img/timer__tpoRight.svg" alt="" />
-      <img class="timer__bottom" src="img/timer__bottom.svg" alt="" />
-    </section>
-
-    <section class="gallery">
-      <div class="gallery__title">
-        <p>галерея</p>
+    </div>
+    <div class="main_slider">
+      <div class="slider mainSlider">
+        <div><img src="img/mainSlider.png" alt="" /></div>
+        <div><img src="img/mainSlider.png" alt="" /></div>
+        <div><img src="img/mainSlider.png" alt="" /></div>
+        <div><img src="img/mainSlider.png" alt="" /></div>
+        <div><img src="img/mainSlider.png" alt="" /></div>
+        <div><img src="img/mainSlider.png" alt="" /></div>
+      </div>
+      <div class="ms__button__wrap"></div>
+    </div>
+    <div class="main__text__block main__text__block__mobil">
+      <div class="mtb__sn">
+        <a href="#"><img src="img/vk.svg" alt="Вконтакте" /></a>
+        <a href="#"><img src="img/insta.svg" alt="Instagram" /></a>
+      </div>
+      <div class="mtb__text">
+        <span>Встречающий заголовок</span>
         <hr />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
+          velit non lacus scelerisque rutrum eu vitae ipsum. Cras a maximus
+          erat, vitae feugiat mi.
+        </p>
+        <label id="InTheForm">кнопка</label>
       </div>
-      <div class="gallery__toogle">
-        <span>модные показы</span>
-        <span>светские мероприятия</span>
-        <span>закрытые вечеринки</span>
+    </div>
+  </section>
+
+  <section class="nextEvent">
+    <div class="nextEvent__time">
+      <div id="timer">
+        <div><span id="days"></span></div>
+        <div><span>:</span></div>
+        <div><span id="hours"></span></div>
+        <div><span>:</span></div>
+        <div><span id="minutes"></span></div>
       </div>
-      <div class="gallery__slider">
-        <div class="slider gallerySlider">
-          <div>
-            <div class="gallery_slide">
-              <img class="gB1" src="img/vertical_2.png" alt="" />
-              <img class="gM1" src="img/mainPage.png" alt="" />
-              <img class="gM2" src="img/mainPage.png" alt="" />
-              <img class="gM3" src="img/mainPage.png" alt="" />
-              <img class="gM4" src="img/mainPage.png" alt="" />
-              <img class="gM5" src="img/mainPage.png" alt="" />
-              <img class="gB2" src="img/vertical_2.png" alt="" />
-            </div>
-          </div>
-          <div>
-            <div class="gallery_slide">
-              <img class="gB1" src="img/vertical_2.png" alt="" />
-              <img class="gM1" src="img/mainPage.png" alt="" />
-              <img class="gM2" src="img/mainPage.png" alt="" />
-              <img class="gM3" src="img/mainPage.png" alt="" />
-              <img class="gM4" src="img/mainPage.png" alt="" />
-              <img class="gM5" src="img/mainPage.png" alt="" />
-              <img class="gB2" src="img/vertical_2.png" alt="" />
-            </div>
-          </div>
-          <div>
-            <div class="gallery_slide">
-              <img class="gB1" src="img/vertical_2.png" alt="" />
-              <img class="gM1" src="img/mainPage.png" alt="" />
-              <img class="gM2" src="img/mainPage.png" alt="" />
-              <img class="gM3" src="img/mainPage.png" alt="" />
-              <img class="gM4" src="img/mainPage.png" alt="" />
-              <img class="gM5" src="img/mainPage.png" alt="" />
-              <img class="gB2" src="img/vertical_2.png" alt="" />
-            </div>
+
+      <div class="nt__title">
+        <p>дней</p>
+        <p>часов</p>
+        <p>минут</p>
+      </div>
+      <hr class="nexEvent__hr" />
+    </div>
+    <div class="nextEvent__content">
+      <div class="nc__imgLeft">
+        <img src="img/vertical.png" alt="" />
+      </div>
+      <div class="nc__text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
+          velit non lacus scelerisque rutrum eu vitae ipsum. Cras a maximus
+          erat, vitae feugiat mi.
+        </p>
+        <span>цифра</span>
+        <span class="nc__number">10+</span>
+      </div>
+      <div class="nc__imgRight">
+        <img src="img/mainPage.png" alt="" />
+      </div>
+      <div class="nextEvent__time nc__timer">
+        <div id="timer">
+          <div><span id="days"></span></div>
+          <div><span>:</span></div>
+          <div><span id="hours"></span></div>
+          <div><span>:</span></div>
+          <div><span id="minutes"></span></div>
+        </div>
+  
+        <div class="nt__title">
+          <p>дней</p>
+          <p>часов</p>
+          <p>минут</p>
+        </div>
+        <hr class="nexEvent__hr" />
+      </div>
+    </div>
+
+    <img class="timer__tpoRight" src="img/timer__tpoRight.svg" alt="" />
+    <img class="timer__bottom" src="img/timer__bottom.svg" alt="" />
+  </section>
+
+  <section class="gallery">
+    <div class="gallery__title">
+      <p>галерея</p>
+      <hr />
+    </div>
+    <div class="gallery__toogle">
+      <span>модные показы</span>
+      <span>светские мероприятия</span>
+      <span>закрытые вечеринки</span>
+    </div>
+    <div class="gallery__slider">
+      <div class="slider gallerySlider">
+        <div>
+          <div class="gallery_slide">
+            <img class="gB1" src="img/vertical_2.png" alt="" />
+            <img class="gM1" src="img/mainPage.png" alt="" />
+            <img class="gM2" src="img/mainPage.png" alt="" />
+            <img class="gM3" src="img/mainPage.png" alt="" />
+            <img class="gM4" src="img/mainPage.png" alt="" />
+            <img class="gM5" src="img/mainPage.png" alt="" />
+            <img class="gB2" src="img/vertical_2.png" alt="" />
           </div>
         </div>
-        <div class="gallarySlider__bottom">
-          <p>21.01.2021</p>
-          <span>“искусство стиля”</span>
+        <div>
+          <div class="gallery_slide">
+            <img class="gB1" src="img/vertical_2.png" alt="" />
+            <img class="gM1" src="img/mainPage.png" alt="" />
+            <img class="gM2" src="img/mainPage.png" alt="" />
+            <img class="gM3" src="img/mainPage.png" alt="" />
+            <img class="gM4" src="img/mainPage.png" alt="" />
+            <img class="gM5" src="img/mainPage.png" alt="" />
+            <img class="gB2" src="img/vertical_2.png" alt="" />
+          </div>
+        </div>
+        <div>
+          <div class="gallery_slide">
+            <img class="gB1" src="img/vertical_2.png" alt="" />
+            <img class="gM1" src="img/mainPage.png" alt="" />
+            <img class="gM2" src="img/mainPage.png" alt="" />
+            <img class="gM3" src="img/mainPage.png" alt="" />
+            <img class="gM4" src="img/mainPage.png" alt="" />
+            <img class="gM5" src="img/mainPage.png" alt="" />
+            <img class="gB2" src="img/vertical_2.png" alt="" />
+          </div>
         </div>
       </div>
-
-      <img src="img/gallery_bottom.svg" alt="" class="gallery__bg__bottom" />
-      <img src="img/gallery_topLeft.svg" alt="" class="gallery__bg__tioRight" />
-    </section>
-
-    <section class="partners">
-      <span class="parters__title">партнеры</span>
-      <hr>
-      <div class="parters__slider">
-        <div class="slider partnersSlider">
-          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
-          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
-          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
-          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
-          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
-          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
-          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
-          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
-          <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
-          <div class="partners__slide partners__slide__add"><img src="img/gallerySlider__add.svg" alt="" /><p>стать партнером</p></div>
-        </div
+      <div class="gallarySlider__bottom">
+        <p>21.01.2021</p>
+        <span>“искусство стиля”</span>
       </div>
-    </section>
+    </div>
+    <div class="gallery__slider gallery__slider_mobil">
+      <div class="slider gallerySlider gallerySlider__mobil">
+        <div>
+            <img class="gB1" src="img/vertical_2.png" alt="" />
+        </div>
+        <div>
+            <img class="gB1" src="img/vertical_2.png" alt="" />
+        </div>
+        <div>
+            <img class="gB1" src="img/vertical_2.png" alt="" />
+        </div>
+        <div>
+            <img class="gB1" src="img/vertical_2.png" alt="" />
+        </div>
+      </div>
+      <div class="gallarySlider__bottom">
+        <p>21.01.2021</p>
+        <span>“искусство стиля”</span>
+      </div>
+    </div>
 
-    <section class="bePartners">
-      <p>хотите стать нашим партнером?</p>
-      <hr>
-    </section>
+    <img src="img/gallery_bottom.svg" alt="" class="gallery__bg__bottom" />
+    <img src="img/gallery_topLeft.svg" alt="" class="gallery__bg__tioRight" />
+  </section>
 
-    <section class="feedback">
+  <section class="partners">
+    <span class="parters__title">партнеры</span>
+    <hr>
+    <div class="parters__slider">
+      <div class="slider partnersSlider">
+        <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+        <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+        <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+        <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+        <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+        <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+        <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+        <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+        <div class="partners__slide"><img src="img/partners2.png" alt="" /></div>
+        <div class="partners__slide partners__slide__add"><img src="img/gallerySlider__add.svg" alt="" />
+          <p>стать партнером</p>
+        </div>
+      </div </div>
+  </section>
+
+  <section class="bePartners">
+    <p>хотите стать нашим партнером?</p>
+    <hr>
+  </section>
+
+  <section class="feedback">
+    <div class="feedback__head">
+
       <div class="feedback__form">
-        <p class="form__title">стать учасником клуба</p>
+        <p class="form__title">Стать участником
+          закрытого клуба</p>
         <form action="">
-          <input type="text" placeholder="Имя">
-          <input type="email" placeholder="Ваша электронная почта">
-          <input type="number" placeholder="Ваш номер телефона">
+          <input type="text" placeholder="Имя" required>
+          <input type="email" placeholder="Ваша электронная почта" required>
+          <input type="tel" placeholder="Ваш номер телефона" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required alt="123-456-7891">
           <select>
             <option value="participants">Участник</option>
             <option value="partner">Партнер</option>
           </select>
           <label for="formInp">отправить</label>
-          <input type="button" id="formInp">
+          <input type="submit" id="formInp">
         </form>
       </div>
       <div class="feedback__img">
@@ -189,107 +246,164 @@
           <a href="#"><img src="img/insta.svg" alt=""></a>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="feedback__footer">
+      <span>Донецк, Артема 119, 071-305-83-91</span>
+      <p>© 2021 ITD Company. All rights reserved</p>
+    </div>
+
+      <img class="feedbackBG feedbackBG__topRight" src="img/callmeTopRight.svg" alt="">
+      <img class="feedbackBG feedbackBG__bottomLeft" src="img/callmeBottomLeft.svg" alt="">
+      <img class="feedbackBG feedbackBG__rightBottom" src="img/callme_rightbottom.svg"alt="">
+      <img class="feedbackBG feedbackBG__topRightCloud" src="img/callmeTopRightCloud.svg"alt="">
+      <img class="feedbackBG feedbackBG__leftBottom" src="img/callmeLeftCloud.svg"alt="">
+
+  </section>
 
 
-    <script src="js/script.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <script>
-      $(".mainSlider").slick({
-        infinite: false,
+  <script src="js/script.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $(".mainSlider").slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrow: true,
+      dots: true,
+      responsive: [
+    {
+      breakpoint: 920,
+      settings: {
+        arrow: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrow: true,
-        dots: true,
-      });
-    </script>
-    <script>
-      $(".gallerySlider").slick({
         infinite: false,
+        dots: true
+      }
+    },]
+    });
+  </script>
+  <script>
+    $(".gallerySlider").slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrow: true,
+      dots: true,
+      responsive: [
+    {
+      breakpoint: 920,
+      settings: {
+        arrow: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrow: true,
-        dots: true,
-      });
-    </script>
-    <script>
-      $(".partnersSlider").slick({
         infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        dots: false
+      }
+    },]
+    });
+  </script>
+  <script>
+    $(".gallerySlider__mobil").slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrow: true,
+      dots: false,
+    });
+  </script>
+  <script>
+    $(".partnersSlider").slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrow: true,
+      dots: false,
+      rows: 2,
+      responsive: [
+    {
+      breakpoint: 920,
+      settings: {
         arrow: true,
-        dots: false,
-        rows: 2
-      });
-    </script>
-    <script>
-      function initializeTimer() {
-        var endDate = new Date(2021, 1, 25, 14);
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: false
+      }
+    },]
+    });
+  </script>
+  <script>
+    function initializeTimer() {
+      var endDate = new Date(2021, 1, 25, 14);
 
-        var currentDate = new Date();
-        var seconds = (endDate - currentDate) / 1000;
-        if (seconds > 0) {
-          var minutes = seconds / 59;
-          var hours = minutes / 59;
-          var days = hours / 24;
-          minutes = (hours - Math.floor(hours)) * 59;
-          days = Math.floor(days);
-          hours = Math.floor(hours) - days * 24;
+      var currentDate = new Date();
+      var seconds = (endDate - currentDate) / 1000;
+      if (seconds > 0) {
+        var minutes = seconds / 59;
+        var hours = minutes / 59;
+        var days = hours / 24;
+        minutes = (hours - Math.floor(hours)) * 59;
+        days = Math.floor(days);
+        hours = Math.floor(hours) - days * 24;
 
-          seconds = Math.floor((minutes - Math.floor(minutes)) * 59);
-          minutes = Math.floor(minutes);
+        seconds = Math.floor((minutes - Math.floor(minutes)) * 59);
+        minutes = Math.floor(minutes);
 
-          setTimePage(days, hours, minutes, seconds);
+        setTimePage(days, hours, minutes, seconds);
 
-          function secOut() {
-            if (seconds == 0) {
-              if (minutes == 0) {
-                if (hours == 0) {
-                  if (days == 0) {
-                    showMessage(timerId);
-                  } else {
-                    days--;
-                    hours = 24;
-                    minutes = 59;
-                    seconds = 59;
-                  }
+        function secOut() {
+          if (seconds == 0) {
+            if (minutes == 0) {
+              if (hours == 0) {
+                if (days == 0) {
+                  showMessage(timerId);
                 } else {
-                  hours--;
+                  days--;
+                  hours = 24;
                   minutes = 59;
                   seconds = 59;
                 }
               } else {
-                minutes--;
+                hours--;
+                minutes = 59;
                 seconds = 59;
               }
             } else {
-              seconds--;
+              minutes--;
+              seconds = 59;
             }
-            setTimePage(days, hours, minutes, seconds);
+          } else {
+            seconds--;
           }
-          timerId = setInterval(secOut, 1000);
-        } else {
-          alert("Установленая дата уже прошла");
+          setTimePage(days, hours, minutes, seconds);
         }
+        timerId = setInterval(secOut, 1000);
+      } else {
+        alert("Установленая дата уже прошла");
       }
+    }
 
-      window.onload = function () {
-        initializeTimer();
-        window.scrollTo(0,0)
-      };
-      function setTimePage(d, h, m, s) {
-        var days = document.getElementById("days");
-        var hours = document.getElementById("hours");
-        var minutes = document.getElementById("minutes");
+    window.onload = function () {
+      initializeTimer();
+      window.scrollTo(0, 0)
+      const mediaQuery = window.matchMedia('(max-width: 920px)')
+    if (mediaQuery.matches) {
+      document.getElementsByClassName("nextEvent__time")[0].remove()
+    }
+      
+    };
+    function setTimePage(d, h, m, s) {
+      var days = document.getElementById("days");
+      var hours = document.getElementById("hours");
+      var minutes = document.getElementById("minutes");
 
-        days.innerHTML = d;
-        hours.innerHTML = h;
-        minutes.innerHTML = m;
-      }
-    </script>
-  </body>
+      days.innerHTML = d;
+      hours.innerHTML = h;
+      minutes.innerHTML = m;
+    }
+  </script>
+</body>
+
 </html>
