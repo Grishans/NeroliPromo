@@ -23,6 +23,9 @@ a {
 section.main {
   display: flex;
 }
+.mobil__menu__nav {
+  display: none;
+}
 .main__text {
   display: flex;
   flex-direction: column;
@@ -335,6 +338,7 @@ img.timer__bottom {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  z-index: 1;
 }
 .gallery__toogle span {
   font-size: 24px;
@@ -773,6 +777,23 @@ p.form__title {
   width: 25%;
 }
 
+img.btnUP {
+  position: fixed;
+  bottom: 4%;
+  z-index: 999;
+  cursor: pointer;
+  transition: 0.3s;
+}
+img.btnUP:hover {
+  transform: scale(1.2);
+}
+img.unActive {
+  right: -50%;
+}
+img.btnUPActive {
+  right: 1%;
+}
+
 /*Adaptation*/
 
 @media all and (max-width: 920px) {
@@ -787,14 +808,38 @@ p.form__title {
   section.main {
     flex-direction: column;
     overflow-x: hidden;
+    position: relative;
   }
   .main__text {
     width: 100%;
   }
   .main__text__logo {
+    position: relative;
     width: 100%;
     justify-content: space-between;
-    padding-bottom: 20px;
+    box-sizing: border-box;
+    padding: 0 5% 20px;
+    transition: 0.3s;
+  }
+  .mobil__menu__nav {
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: -500px;
+    width: 100%;
+    background: #fff;
+    z-index: 99;
+    transition: 0.3s;
+  }
+  .mobil__menu__active {
+    left: 0;
+    transition: 0.3s;
+  }
+  .mobil__menu__nav ul li {
+    list-style: none;
+    font-size: 36px;
+    margin: 40px 0;
+    font-family: Gb;
   }
   img.mobil__menu {
     display: block;
@@ -811,6 +856,13 @@ p.form__title {
   }
   .main_slider {
     width: 100%;
+  }
+  .main_slider .slider .slick-arrow {
+    opacity: 0;
+  }
+  .mainSlider ul.slick-dots {
+    bottom: -17%;
+    left: 25%;
   }
   .ms__button__wrap {
     display: none;
@@ -949,6 +1001,7 @@ p.form__title {
   .feedback__head {
     flex-direction: column;
     margin-bottom: 30px;
+    padding: 60px 5% 0 5%;
   }
   .feedback__img .fi__img {
     display: none;

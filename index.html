@@ -15,7 +15,7 @@
     <div class="main__text">
       <div class="main__text__logo">
         <img src="img/logo.svg" alt="" class="logo"/>
-        <img src="img/menu_mobil.svg" alt="" class="mobil__menu">
+        <img src="img/menu_mobil.svg" alt="" class="mobil__menu" id="mobil__menu">
       </div>
       <div class="main__text__block">
         <div class="mtb__sn">
@@ -60,6 +60,15 @@
         </p>
         <label id="InTheForm">кнопка</label>
       </div>
+    </div>
+    <div class="mobil__menu__nav" id="mobil__menu__nav">
+      <ul>
+        <li id="topPage">Главная</li>
+        <li id="eventPage">Начало мероприятия</li>
+        <li id="galleryPage">Галерея</li>
+        <li id="partnersPage">Партнеры</li>
+        <li id="feedback__nav">Стать участником</li>
+      </ul>
     </div>
   </section>
 
@@ -260,6 +269,8 @@
 
   </section>
 
+  <img src="img/btnUp.svg" id="btnUP" class="btnUP">
+
 
   <script src="js/script.js"></script>
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -403,6 +414,86 @@
       hours.innerHTML = h;
       minutes.innerHTML = m;
     }
+  </script>
+
+  <script>
+    let nav_img = document.getElementById('mobil__menu')
+    let nav = document.getElementsByClassName('mobil__menu__nav')
+
+    let topPage__nav = document.getElementById('topPage')
+    let eventPage__nav = document.getElementById('eventPage')
+    let galleryPage__nav = document.getElementById('galleryPage')
+    let partnersPage__nav = document.getElementById('partnersPage')
+    let feedack__nav = document.getElementById('feedback__nav')
+
+    let topPage = document.getElementsByClassName('main')
+    let eventPage = document.getElementsByClassName('nextEvent')
+    let galleryPage = document.getElementsByClassName('gallery')
+    let partnersPage = document.getElementsByClassName('partners')
+    let bePartnersPage = document.getElementsByClassName('bePartners')
+    let feedbackPage = document.getElementsByClassName('feedback')
+
+    let timer = document.getElementById('timer')
+
+    nav_img.onclick = function(){
+      nav[0].classList.toggle('mobil__menu__active')
+    }
+
+    topPage__nav.onclick = function(){
+      window.scrollTo({
+				top: 0,
+				behavior: "smooth",
+			})
+    }
+
+    eventPage__nav.onclick = function(){
+      let distance = topPage[0].offsetHeight + timer.offsetHeight
+      window.scrollTo({
+				top: distance,
+				behavior: "smooth",
+			})
+    }
+
+    galleryPage__nav.onclick = function(){
+      let distance = topPage[0].offsetHeight + eventPage[0].offsetHeight
+      window.scrollTo({
+				top: distance,
+				behavior: "smooth",
+			})
+    }
+
+    partnersPage__nav.onclick = function(){
+      let distance = topPage[0].offsetHeight + eventPage[0].offsetHeight + galleryPage[0].offsetHeight
+      window.scrollTo({
+				top: distance,
+				behavior: "smooth",
+			})
+    }
+
+    feedack__nav.onclick = function(){
+      let distance = topPage[0].offsetHeight + eventPage[0].offsetHeight + galleryPage[0].offsetHeight + bePartnersPage[0].offsetHeight + feedbackPage[0].offsetHeight
+      window.scrollTo({
+				top: distance,
+				behavior: "smooth",
+			})
+    }
+
+    document.getElementById('btnUP').onclick = function(){
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
+    document.addEventListener("scroll", () => {
+      if(document.getElementsByClassName('main')[0].getBoundingClientRect().bottom < 50){
+        document.getElementsByClassName('btnUP')[0].classList.add('btnUPActive')
+        document.getElementsByClassName('btnUP')[0].classList.remove('unActive')
+      } else{
+        document.getElementsByClassName('btnUP')[0].classList.add('unActive')
+        document.getElementsByClassName('btnUP')[0].classList.remove('btnUPActive')
+      }
+    })
+    
   </script>
 </body>
 
