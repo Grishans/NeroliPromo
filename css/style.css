@@ -402,7 +402,7 @@ img.timer__bottom {
   cursor: pointer;
 }
 .gallerySlider button.slick-prev {
-  bottom: -6.5%;
+  bottom: -5.5%;
   right: 52.5%;
 
   background: url("../img/arr_left_yellow.svg") no-repeat;
@@ -410,7 +410,7 @@ img.timer__bottom {
   background-size: contain;
 }
 .gallerySlider button.slick-next {
-  bottom: -6.5%;
+  bottom: -5.5%;
   right: 48%;
   background: url("../img/arr_right_yellow.svg") no-repeat;
   background-position: center left;
@@ -794,10 +794,32 @@ img.unActive {
   right: -50%;
 }
 img.btnUPActive {
-  right: 1%;
+  right: 3%;
 }
 
 /*Adaptation*/
+
+@media all and (min-width: 1800px) {
+  .gallery_slide {
+    min-height: 1100px;
+  }
+}
+
+@media all and (max-width: 1500px) {
+  .gallery_slide {
+    min-height: 900px;
+  }
+}
+@media all and (max-width: 1250px) {
+  .gallery_slide {
+    min-height: 750px;
+  }
+}
+@media all and (max-width: 1050px) {
+  .gallery_slide {
+    min-height: 600px;
+  }
+}
 
 @media all and (max-width: 920px) {
   .timer__tpoRight,
@@ -975,6 +997,7 @@ img.btnUPActive {
 
   .parters__slider {
     width: 100%;
+    padding-left: 2%;
   }
   .parters__slider .slider .slick-arrow {
     width: 30px;
@@ -995,8 +1018,10 @@ img.btnUPActive {
   /*BePartners*/
 
   section.bePartners {
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    height: 90px;
+    margin-bottom: 20px;
   }
   section.bePartners p {
     font-size: 18px;
@@ -1025,6 +1050,41 @@ img.btnUPActive {
     font-size: 18px;
   }
   .feedback__footer p {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  p.form__title {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .mobil__menu__nav {
+    top: 70px;
+  }
+  .mobil__menu__nav ul li {
+    font-size: 27px;
+  }
+  .mtb__text span {
+    font-size: 30px;
+  }
+  .gallarySlider__bottom {
+    padding: 0 10px;
+  }
+  .gallarySlider__bottom p,
+  .gallarySlider__bottom span {
+    font-size: 14px;
+  }
+  section.bePartners p {
+    font-size: 13px;
+  }
+  p.form__title {
+    font-size: 25px;
+  }
+  .feedback__footer span {
     font-size: 14px;
   }
 }
