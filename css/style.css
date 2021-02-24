@@ -1,10 +1,10 @@
 @font-face {
   font-family: Gb;
-  src: local("Mont"), url("/fonts/GothamPro-Bold.woff") format("woff");
+  src: local("Mont"), url("../fonts/GothamPro-Bold.woff") format("woff");
 }
 @font-face {
   font-family: G;
-  src: local("Mont"), url("/fonts/GothamPro.woff") format("woff");
+  src: local("Mont"), url("../fonts/GothamPro.woff") format("woff");
 }
 
 body {
@@ -18,6 +18,9 @@ span,
 label,
 a {
   font-family: G;
+}
+.disabledSlider {
+  display: none !important;
 }
 
 section.main {
@@ -351,7 +354,7 @@ img.timer__bottom {
 }
 .gallery_slide {
   width: 100%;
-  height: 1000px;
+  min-height: 1000px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -931,7 +934,9 @@ img.btnUPActive {
     font-size: 14px;
     margin: 0;
     padding: 0 10px;
+    transition: 0.3s;
   }
+
   .gallery__slider {
     display: none;
   }

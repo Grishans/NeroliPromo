@@ -51,6 +51,8 @@ function initializeTimer() {
 window.onload = function () {
   initializeTimer();
   window.scrollTo(0, 0);
+  setTimeout(function(){gallery_toogle1.click()},200)
+  
   const mediaQuery = window.matchMedia("(max-width: 920px)");
   if (mediaQuery.matches) {
     document.getElementsByClassName("nextEvent__time")[0].remove();
@@ -65,6 +67,8 @@ function setTimePage(d, h, m, s) {
   hours.innerHTML = h;
   minutes.innerHTML = m;
 }
+
+// Menu
 
 let nav_img = document.getElementById("mobil__menu");
 let nav = document.getElementsByClassName("mobil__menu__nav");
@@ -150,3 +154,54 @@ document.addEventListener("scroll", () => {
     document.getElementsByClassName("btnUP")[0].classList.remove("btnUPActive");
   }
 });
+
+// Gallery
+
+let gallery_toogle1 = document.getElementById('galleryToogle1')
+let gallery_toogle2 = document.getElementById('galleryToogle2')
+let gallery_toogle3 = document.getElementById('galleryToogle3')
+
+let galleriSlider1 = document.getElementsByClassName('gallerySlider1')[0]
+let galleriSlider2 = document.getElementsByClassName('gallerySlider2')[0]
+let galleriSlider3 = document.getElementsByClassName('gallerySlider3')[0]
+
+let galleriSliderMobil1 = document.getElementsByClassName('gallerySlider__mobil1')[0]
+let galleriSliderMobil2 = document.getElementsByClassName('gallerySlider__mobil2')[0]
+let galleriSliderMobil3 = document.getElementsByClassName('gallerySlider__mobil3')[0]
+
+gallery_toogle1.onclick = function(){
+  gallery_toogle1.style.fontWeight = 600
+  gallery_toogle2.style.fontWeight = 400
+  gallery_toogle3.style.fontWeight = 400
+  galleriSlider1.classList.remove('disabledSlider')
+  galleriSlider2.classList.add('disabledSlider')
+  galleriSlider3.classList.add('disabledSlider')
+  galleriSliderMobil1.classList.remove('disabledSlider')
+  galleriSliderMobil2.classList.add('disabledSlider')
+  galleriSliderMobil3.classList.add('disabledSlider')
+}
+gallery_toogle2.onclick = function(){
+  gallery_toogle1.style.fontWeight = 400
+  gallery_toogle2.style.fontWeight = 600
+  gallery_toogle3.style.fontWeight = 400
+  galleriSlider1.classList.add('disabledSlider')
+  galleriSlider2.classList.remove('disabledSlider')
+  galleriSlider3.classList.add('disabledSlider')
+  galleriSliderMobil1.classList.add('disabledSlider')
+  galleriSliderMobil2.classList.remove('disabledSlider')
+  galleriSliderMobil3.classList.add('disabledSlider')
+  
+}
+gallery_toogle3.onclick = function(){
+  gallery_toogle1.style.fontWeight = 400
+  gallery_toogle2.style.fontWeight = 400
+  gallery_toogle3.style.fontWeight = 600
+  galleriSlider1.classList.add('disabledSlider')
+  galleriSlider2.classList.add('disabledSlider')
+  galleriSlider3.classList.remove('disabledSlider')
+  galleriSliderMobil1.classList.add('disabledSlider')
+  galleriSliderMobil2.classList.add('disabledSlider')
+  galleriSliderMobil3.classList.remove('disabledSlider')
+}
+
+
