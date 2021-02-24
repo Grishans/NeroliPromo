@@ -1,5 +1,5 @@
 function initializeTimer() {
-  var endDate = new Date(2021, 1, 25, 14);
+  var endDate = new Date(2021, 1, 25, 17);
 
   var currentDate = new Date();
   var seconds = (endDate - currentDate) / 1000;
@@ -44,15 +44,18 @@ function initializeTimer() {
     }
     timerId = setInterval(secOut, 1000);
   } else {
-    alert("Установленая дата уже прошла");
+    document.getElementsByClassName("nextEvent__time")[0].style.display =
+      "none";
   }
 }
 
 window.onload = function () {
   initializeTimer();
   window.scrollTo(0, 0);
-  setTimeout(function(){gallery_toogle1.click()},200)
-  
+  setTimeout(function () {
+    gallery_toogle1.click();
+  }, 200);
+
   const mediaQuery = window.matchMedia("(max-width: 920px)");
   if (mediaQuery.matches) {
     document.getElementsByClassName("nextEvent__time")[0].remove();
@@ -84,9 +87,20 @@ let partnersPage = document.getElementsByClassName("partners");
 let bePartnersPage = document.getElementsByClassName("bePartners");
 let feedbackPage = document.getElementsByClassName("feedback");
 let timer = document.getElementById("timer");
+var toTheForm =
+  topPage[0].offsetHeight +
+  eventPage[0].offsetHeight +
+  galleryPage[0].offsetHeight +
+  bePartnersPage[0].offsetHeight +
+  feedbackPage[0].offsetHeight;
 
 nav_img.onclick = function () {
   nav[0].classList.toggle("mobil__menu__active");
+  if (nav_img.getAttribute("src") === "img/menu_mobil.svg") {
+    nav_img.setAttribute("src", "img/cross.svg");
+  } else {
+    nav_img.setAttribute("src", "img/menu_mobil.svg");
+  }
 };
 
 topPage__nav.onclick = function () {
@@ -142,6 +156,78 @@ document.getElementById("btnUP").onclick = function () {
     behavior: "smooth",
   });
 };
+
+// Gallery
+
+let gallery_toogle1 = document.getElementById("galleryToogle1");
+let gallery_toogle2 = document.getElementById("galleryToogle2");
+let gallery_toogle3 = document.getElementById("galleryToogle3");
+
+let galleriSlider1 = document.getElementsByClassName("gallerySlider1")[0];
+let galleriSlider2 = document.getElementsByClassName("gallerySlider2")[0];
+let galleriSlider3 = document.getElementsByClassName("gallerySlider3")[0];
+
+let galleriSliderMobil1 = document.getElementsByClassName(
+  "gallerySlider__mobil1"
+)[0];
+let galleriSliderMobil2 = document.getElementsByClassName(
+  "gallerySlider__mobil2"
+)[0];
+let galleriSliderMobil3 = document.getElementsByClassName(
+  "gallerySlider__mobil3"
+)[0];
+
+gallery_toogle1.onclick = function () {
+  gallery_toogle1.style.fontWeight = 600;
+  gallery_toogle2.style.fontWeight = 400;
+  gallery_toogle3.style.fontWeight = 400;
+  galleriSlider1.classList.remove("disabledSlider");
+  galleriSlider2.classList.add("disabledSlider");
+  galleriSlider3.classList.add("disabledSlider");
+  galleriSliderMobil1.classList.remove("disabledSlider");
+  galleriSliderMobil2.classList.add("disabledSlider");
+  galleriSliderMobil3.classList.add("disabledSlider");
+};
+gallery_toogle2.onclick = function () {
+  gallery_toogle1.style.fontWeight = 400;
+  gallery_toogle2.style.fontWeight = 600;
+  gallery_toogle3.style.fontWeight = 400;
+  galleriSlider1.classList.add("disabledSlider");
+  galleriSlider2.classList.remove("disabledSlider");
+  galleriSlider3.classList.add("disabledSlider");
+  galleriSliderMobil1.classList.add("disabledSlider");
+  galleriSliderMobil2.classList.remove("disabledSlider");
+  galleriSliderMobil3.classList.add("disabledSlider");
+};
+gallery_toogle3.onclick = function () {
+  gallery_toogle1.style.fontWeight = 400;
+  gallery_toogle2.style.fontWeight = 400;
+  gallery_toogle3.style.fontWeight = 600;
+  galleriSlider1.classList.add("disabledSlider");
+  galleriSlider2.classList.add("disabledSlider");
+  galleriSlider3.classList.remove("disabledSlider");
+  galleriSliderMobil1.classList.add("disabledSlider");
+  galleriSliderMobil2.classList.add("disabledSlider");
+  galleriSliderMobil3.classList.remove("disabledSlider");
+};
+
+document.getElementById("InTheForm").onclick = function () {
+  window.scrollTo({
+    top: toTheForm,
+    behavior: "smooth",
+  });
+};
+document.getElementsByClassName(
+  "partners__slide__add"
+)[0].onclick = function () {
+  window.scrollTo({
+    top: toTheForm,
+    behavior: "smooth",
+  });
+};
+
+// Animation
+
 document.addEventListener("scroll", () => {
   if (
     document.getElementsByClassName("main")[0].getBoundingClientRect().bottom <
@@ -154,54 +240,3 @@ document.addEventListener("scroll", () => {
     document.getElementsByClassName("btnUP")[0].classList.remove("btnUPActive");
   }
 });
-
-// Gallery
-
-let gallery_toogle1 = document.getElementById('galleryToogle1')
-let gallery_toogle2 = document.getElementById('galleryToogle2')
-let gallery_toogle3 = document.getElementById('galleryToogle3')
-
-let galleriSlider1 = document.getElementsByClassName('gallerySlider1')[0]
-let galleriSlider2 = document.getElementsByClassName('gallerySlider2')[0]
-let galleriSlider3 = document.getElementsByClassName('gallerySlider3')[0]
-
-let galleriSliderMobil1 = document.getElementsByClassName('gallerySlider__mobil1')[0]
-let galleriSliderMobil2 = document.getElementsByClassName('gallerySlider__mobil2')[0]
-let galleriSliderMobil3 = document.getElementsByClassName('gallerySlider__mobil3')[0]
-
-gallery_toogle1.onclick = function(){
-  gallery_toogle1.style.fontWeight = 600
-  gallery_toogle2.style.fontWeight = 400
-  gallery_toogle3.style.fontWeight = 400
-  galleriSlider1.classList.remove('disabledSlider')
-  galleriSlider2.classList.add('disabledSlider')
-  galleriSlider3.classList.add('disabledSlider')
-  galleriSliderMobil1.classList.remove('disabledSlider')
-  galleriSliderMobil2.classList.add('disabledSlider')
-  galleriSliderMobil3.classList.add('disabledSlider')
-}
-gallery_toogle2.onclick = function(){
-  gallery_toogle1.style.fontWeight = 400
-  gallery_toogle2.style.fontWeight = 600
-  gallery_toogle3.style.fontWeight = 400
-  galleriSlider1.classList.add('disabledSlider')
-  galleriSlider2.classList.remove('disabledSlider')
-  galleriSlider3.classList.add('disabledSlider')
-  galleriSliderMobil1.classList.add('disabledSlider')
-  galleriSliderMobil2.classList.remove('disabledSlider')
-  galleriSliderMobil3.classList.add('disabledSlider')
-  
-}
-gallery_toogle3.onclick = function(){
-  gallery_toogle1.style.fontWeight = 400
-  gallery_toogle2.style.fontWeight = 400
-  gallery_toogle3.style.fontWeight = 600
-  galleriSlider1.classList.add('disabledSlider')
-  galleriSlider2.classList.add('disabledSlider')
-  galleriSlider3.classList.remove('disabledSlider')
-  galleriSliderMobil1.classList.add('disabledSlider')
-  galleriSliderMobil2.classList.add('disabledSlider')
-  galleriSliderMobil3.classList.remove('disabledSlider')
-}
-
-

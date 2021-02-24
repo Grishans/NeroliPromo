@@ -62,6 +62,12 @@ img.mobil__menu {
 .mtb__sn a {
   margin-bottom: 40px;
 }
+.mtb__sn a img {
+  transition: 0.3s;
+}
+.mtb__sn a img:hover {
+  transform: rotate(15deg);
+}
 .mtb__text {
   position: absolute;
   top: 18%;
@@ -89,6 +95,7 @@ img.mobil__menu {
 .mtb__text p {
   font-size: 18px;
 }
+
 .mtb__text label#InTheForm {
   position: relative;
   display: flex;
@@ -132,6 +139,22 @@ img.mobil__menu {
   position: absolute;
   top: 20%;
   right: 5%;
+}
+@keyframes buttonHover {
+  from {
+    right: 5%;
+  }
+  50% {
+    right: 2%;
+  }
+  to {
+    right: 5%;
+  }
+}
+.mtb__text label#InTheForm:hover::after {
+  animation-name: buttonHover;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 .main_slider {
   position: relative;
@@ -355,6 +378,7 @@ img.timer__bottom {
 .gallery_slide {
   width: 100%;
   min-height: 1000px;
+  max-height: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -647,7 +671,7 @@ p.form__title {
   border-bottom: 2px solid #fff;
   color: #fff;
   background: transparent;
-  height: 22px;
+  height: 35px;
   margin-bottom: 40px;
   outline: none;
   font-weight: 600;
@@ -696,6 +720,7 @@ p.form__title {
   border-bottom: 2px solid #cdcdcd;
   color: #fff;
   outline: none;
+  height: 35px;
 }
 .feedback__form form select option {
   color: #000;
@@ -850,11 +875,11 @@ img.btnUPActive {
     display: block;
     position: absolute;
     top: 90px;
-    left: -500px;
+    left: -1000px;
     width: 100%;
     background: #fff;
     z-index: 99;
-    transition: 0.3s;
+    transition: 0.2s;
   }
   .mobil__menu__active {
     left: 0;
